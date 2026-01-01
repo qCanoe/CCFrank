@@ -1,58 +1,89 @@
 .ccf-rank {
   display: inline-block;
-  height: 18.35px;
+  height: 18px;
+  line-height: 18px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 525;
   white-space: nowrap;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  color: #ffffff;
-  border-radius: 9px;
-  padding: 1px 8px;
+  border-radius: 4px;
+  padding: 0 6px;
   margin-left: 5px;
   margin-right: 5px;
+  vertical-align: middle;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .ccf-a {
-  background-color: #e15f37;
+  background-color: #fceceb;
+  color: #a31515;
+  border: 1px solid #eebdbd;
 }
 
 .ccf-b {
-  background-color: #f5bd42;
+  background-color: #fff4e5;
+  color: #b75c00;
+  border: 1px solid #ffdcb0;
 }
 
 .ccf-c {
-  background-color: #8eba3a;
+  background-color: #eaf6eb;
+  color: #1f6b23;
+  border: 1px solid #cce8cd;
 }
 
 .ccf-e {
-  background-color: #4aa3ea;
+  background-color: #f0f7ff;
+  color: #0d5aa7;
+  border: 1px solid #cce5ff;
 }
 
 .ccf-p {
-  background-color: #6c757d;
+  background-color: #f5f5f5;
+  color: #616161;
+  border: 1px solid #e0e0e0;
 }
 
 .ccf-none {
-  background-color: #6c757d;
+  display: none;
 }
 
 .ccf-tooltip {
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .ccf-tooltip .ccf-tooltiptext {
   visibility: hidden;
-  background-color: #007bff;
-  border-radius: 6px;
-  padding: 5px 5px;
-  bottom: 100%;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 6px 10px;
+  bottom: 125%;
   left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   z-index: 980624;
-  margin-left: -60px;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: normal;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin-bottom: 5px;
+}
+
+/* Tooltip arrow */
+.ccf-tooltip .ccf-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333333 transparent transparent transparent;
 }
 
 .ccf-tooltip:hover .ccf-tooltiptext {
   visibility: visible;
+  opacity: 1;
 }

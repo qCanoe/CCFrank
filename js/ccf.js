@@ -73,6 +73,9 @@ ccf.getRankClass = function (ranks) {
 
 ccf.getRankSpan = function (refine, type) {
   let rankInfo = ccf.getRankInfo(refine, type);
+  if (rankInfo.ranks == "none") {
+    return "";
+  }
   let span = $("<span>")
     .addClass("ccf-rank")
     .addClass(ccf.getRankClass(rankInfo.ranks));
@@ -80,8 +83,6 @@ ccf.getRankSpan = function (refine, type) {
     span.text("Expanded");
   } else if (rankInfo.ranks == "P") {
     span.text("Preprint");
-  } else if (rankInfo.ranks == "none") {
-    span.text("CCF None");
   } else {
     span.text("CCF " + rankInfo.ranks.join("/"));
   }
